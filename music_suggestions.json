@@ -1,179 +1,54 @@
 {
     "songs": [
         {
-            "name": "Killer Whale",
-            "artist": "Tropical Fuck Storm",
-            "album": "Braindrops"
+            "name": "Narrator",
+            "artist": "Squid",
+            "album": "Bright Green Field"
         },
         {
-            "name": "Tangerine",
-            "artist": "Beach Fossils",
-            "album": "Somersault"
+            "name": "Low Era",
+            "artist": "Geese",
+            "album": "Projector"
         },
         {
-            "name": "Locket",
-            "artist": "Crumb",
-            "album": "Locket"
+            "name": "Crass",
+            "artist": "Courting",
+            "album": "Grand National"
         },
         {
-            "name": "Hunnybee",
-            "artist": "Unknown Mortal Orchestra",
-            "album": "Sex & Food"
+            "name": "Green & Blue",
+            "artist": "The Murder Capital",
+            "album": "Gigi's Recovery"
         },
         {
-            "name": "Peach Pit",
-            "artist": "Peach Pit",
-            "album": "Being So Normal"
+            "name": "Tunnel Vision",
+            "artist": "Crack Cloud",
+            "album": "Tough Baby"
         },
         {
-            "name": "Spice",
-            "artist": "Cuco",
-            "album": "Para Mi"
+            "name": "Dirty Glasses",
+            "artist": "The Cool Greenhouse",
+            "album": "Sod's Toastie"
         },
         {
-            "name": "Trying",
-            "artist": "Bully",
-            "album": "Sugaregg"
+            "name": "Here's The Thing",
+            "artist": "Sports Team",
+            "album": "Deep Down Happy"
         },
         {
-            "name": "Little Dark Age",
-            "artist": "MGMT",
-            "album": "Little Dark Age"
+            "name": "Bottle Episode",
+            "artist": "Mandy, Indiana",
+            "album": "i've seen a way"
         },
         {
-            "name": "Cigarette Daydreams",
-            "artist": "Cage The Elephant",
-            "album": "Melophobia"
+            "name": "The Overload",
+            "artist": "Yard Act",
+            "album": "The Overload"
         },
         {
-            "name": "Feels Like We Only Go Backwards",
-            "artist": "Tame Impala",
-            "album": "Lonerism"
-        },
-        {
-            "name": "The Less I Know The Better",
-            "artist": "Tame Impala",
-            "album": "Currents"
-        },
-        {
-            "name": "Homage",
-            "artist": "Mild High Club",
-            "album": "Skiptracing"
-        },
-        {
-            "name": "Sober Up",
-            "artist": "AJR",
-            "album": "The Click"
-        },
-        {
-            "name": "Kilby Girl",
-            "artist": "The Backseat Lovers",
-            "album": "When We Were Friends"
-        },
-        {
-            "name": "Dreams Tonite",
-            "artist": "Alvvays",
-            "album": "Antisocialites"
-        },
-        {
-            "name": "In Undertow",
-            "artist": "Alvvays",
-            "album": "Antisocialites"
-        },
-        {
-            "name": "Pleaser",
-            "artist": "Wallows",
-            "album": "Nothing Happens"
-        },
-        {
-            "name": "Are You Bored Yet?",
-            "artist": "Wallows",
-            "album": "Nothing Happens"
-        },
-        {
-            "name": "Scrawny",
-            "artist": "Wallows",
-            "album": "Nothing Happens"
-        },
-        {
-            "name": "Remember When",
-            "artist": "Wallows",
-            "album": "Nothing Happens"
-        },
-        {
-            "name": "I'm Full",
-            "artist": "Wallows",
-            "album": "Nothing Happens"
-        },
-        {
-            "name": "Do Not Wait",
-            "artist": "Wallows",
-            "album": "Nothing Happens"
-        },
-        {
-            "name": "Only Friend",
-            "artist": "Wallows",
-            "album": "Nothing Happens"
-        },
-        {
-            "name": "World's Apart",
-            "artist": "Wallows",
-            "album": "Nothing Happens"
-        },
-        {
-            "name": "What You Like",
-            "artist": "Wallows",
-            "album": "Nothing Happens"
-        },
-        {
-            "name": "Treacherous Doctor",
-            "artist": "Wallows",
-            "album": "Nothing Happens"
-        },
-        {
-            "name": "Sidelines",
-            "artist": "Wallows",
-            "album": "Nothing Happens"
-        },
-        {
-            "name": "1980s Horror Film",
-            "artist": "Wallows",
-            "album": "Nothing Happens"
-        },
-        {
-            "name": "Ice Cold Pool",
-            "artist": "Wallows",
-            "album": "Nothing Happens"
-        },
-        {
-            "name": "Do Not Wait",
-            "artist": "Wallows",
-            "album": "Nothing Happens"
-        },
-        {
-            "name": "1980s Horror Film II",
-            "artist": "Wallows",
-            "album": "Nothing Happens"
-        },
-        {
-            "name": "Just Like A Movie",
-            "artist": "Wallows",
-            "album": "Nothing Happens"
-        },
-        {
-            "name": "Remember When II",
-            "artist": "Wallows",
-            "album": "Nothing Happens"
-        },
-        {
-            "name": "OK",
-            "artist": "Wallows",
-            "album": "Nothing Happens"
-        },
-        {
-            "name": "Pictures of Girls",
-            "artist": "Wallows",
-            "album": "Spring EP"
+            "name": "Jackie Down The Line",
+            "artist": "Fontaines D.C.",
+            "album": "Skinty Fia"
         }
     ]
 }

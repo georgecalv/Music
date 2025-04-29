@@ -9,6 +9,7 @@ from youtubesearchpython import VideosSearch
 from pprint import pprint
 from pytubefix import YouTube
 from openai import OpenAI
+from tqdm import tqdm
 
 
 load_dotenv()
@@ -81,8 +82,7 @@ class FindMusic:
         with open("saved_tracks_with_links.json", "r") as f:
             data = json.load(f)
             num_songs = len(data['songs'])
-            for index in range(num_songs):
-                print(f"({index}/{num_songs}): Downloading song: ", data['songs'][index], "...")
+            for index in tqdm(range(num_songs), desc="Downloading Songs"):
                 song = data['songs'][index]
                 link = song['link']
                 if link:
@@ -90,7 +90,6 @@ class FindMusic:
                         yt = YouTube(link)
                         audio = yt.streams.filter(only_audio=True).first()
                         if audio:
-                            print('Downloading Audio...')
                             audio.download(output_path="./mp3s", filename=f'{song['name']}-{song['artist']}.mp3')
                     except Exception as e:
                         print("Error: ", e)
@@ -98,21 +97,19 @@ class FindMusic:
         with open("saved_tracks_with_links.json", "r") as f:
             data = json.load(f)
             num_songs = len(data["songs"])
-            for index in range(num_songs):
-                print(f" ({index}/{num_songs}): Getting lyrics for song: ", data["songs"][index])
+            for index in tqdm(range(num_songs), desc="Downloading Lyrics"):
                 song = data["songs"][index] 
                 link = song["link"]
                 try:
                     yt = YouTube(link)
                     caption = yt.captions['a.en']
-                    caption.save_captions("captions.txt")
                     if caption:
                         with open(f"./words/{song["name"]}-captions.txt", "w") as f:
                             f.write(caption)
-                    else:
-                        print("Unable to retrieve lyrics")
-                except Exception as e:
-                    print("Error: ", e)
+                except:
+                    print(f"Unable to get captions for {song['name']} by {song['artist']}")
+                    continue
+                
 
     def get_suggestions(self):
         print("Getting Suggestions...")

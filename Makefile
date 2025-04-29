@@ -1,4 +1,4 @@
-clean_mp3:
+clean:
 	./clean.sh
 get-saved:
 	python3 findMusic.py

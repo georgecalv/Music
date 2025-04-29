@@ -1,6 +1,11 @@
 {
     "songs": [
         {
+            "name": "Snow Day",
+            "artist": "shame",
+            "album": "Drunk Tank Pink (Deluxe Edition)"
+        },
+        {
             "name": "Scratchcard Lanyard",
             "artist": "Dry Cleaning",
             "album": "New Long Leg"
@@ -6494,11 +6499,6 @@
             "name": "Starman - 2012 Remaster",
             "artist": "David Bowie",
             "album": "The Rise and Fall of Ziggy Stardust and the Spiders from Mars (2012 Remaster)"
-        },
-        {
-            "name": "Fly by Night (feat. No\u00e9)",
-            "artist": "Lucian",
-            "album": "Fly by Night (feat. No\u00e9)"
         }
     ]
 }
