@@ -8,3 +8,5 @@ download:
 	python3 findMusic.py --download
 get-lyrics:
 	python3 findMusic.py --lyrics
+get-suggest:
+	python3 findMusic.py --suggest

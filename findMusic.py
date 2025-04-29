@@ -9,6 +9,7 @@ from bs4 import BeautifulSoup
 from youtubesearchpython import VideosSearch
 from pprint import pprint
 from pytubefix import YouTube
+from openai import OpenAI
 
 
 load_dotenv()
@@ -18,7 +19,9 @@ class FindMusic:
         os.environ["SPOTIPY_CLIENT_ID"] = os.getenv("SPOTIPY_CLIENT_ID")
         os.environ["SPOTIPY_CLIENT_SECRET"] = os.getenv("SPOTIPY_CLIENT_SECRET")
         os.environ["SPOTIPY_REDIRECT_URI"] = os.getenv("SPOTIPY_REDIRECT_URI")
+        ai_key = os.getenv("OPEN_AI")
         self.sp = spotipy.Spotify(auth_manager=SpotifyOAuth(scope="user-library-read", open_browser=False))
+        self.ai_client = client = OpenAI(api_key=ai_key, base_url="https://api.deepseek.com")
 
     def load_user_saved(self):
         print("Starting to get saved tracks...")
@@ -110,12 +113,30 @@ class FindMusic:
                 except Exception as e:
                     print("Error: ", e)
 
+    def get_suggestions(self):
+        with open("prompt.txt", 'r') as prompt:
+            with open("saved_tracks.json", 'r') as songs:
+                response = self.ai_client.chat.completions.create(
+                    model="deepseek-reasoner",
+                    messages=[
+                        {"role": "system", "content": prompt.read().replace("\n", "")},
+                        {"role": "user", "content": str(json.load(songs))},
+                    ],
+                    temperature=1.5,
+                    stream=False
+                )
+            print(response.choices[0].message.content)
+            print(type(response.choices[0].message.content))
+            with open("music_suggestions.txt", "a") as f:
+                f.write(response.choices[0].message.content)
+
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Find and save Spotify music.")
     parser.add_argument("--links", action="store_true", help="Finds linked of saved tracks from Spotify")
     parser.add_argument("--download", action="store_true", help="Download music from saved tracks with links")
     parser.add_argument("--lyrics", action="store_true", help="Load lyrics from saved tracks with links")
+    parser.add_argument("--suggestions", action="store_true", help="Get Ai suggesstions for new music")
     args = parser.parse_args()
 
     find_music = FindMusic()
@@ -125,5 +146,7 @@ if __name__ == "__main__":
         find_music.download_music()
     elif args.lyrics:
         find_music.load_lyrics()
+    elif args.suggestions:
+        find_music.get_suggestions()
     else:
        find_music.load_user_saved()
