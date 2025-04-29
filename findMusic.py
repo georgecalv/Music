@@ -39,7 +39,7 @@ class FindMusic:
                 offset += limit
                 i += 1
             with open("saved_tracks.json", "w") as f:
-                f.write(json.dumps(self.result, indent=4))
+                f.write(json.dumps(result, indent=4))
             print("Saved tracks written to saved_tracks.json")
         except Exception as e:
             print("Error: ", e)
