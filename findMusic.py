@@ -22,7 +22,6 @@ class FindMusic:
         self.sp = spotipy.Spotify(auth_manager=SpotifyOAuth(scope="user-library-read playlist-modify-public playlist-modify-private", open_browser=False))
         self.ai_client = client = OpenAI(api_key=ai_key, base_url="https://api.deepseek.com")
         self.saved_ids = []
-        self.load_user_saved()
 
     def load_user_saved(self):
         print("Starting to get saved tracks...")
@@ -120,7 +119,7 @@ class FindMusic:
         with open("prompt.txt", 'r') as prompt:
             with open("saved_tracks.json", 'r') as songs:
                 response = self.ai_client.chat.completions.create(
-                    model="deepseek-chat",
+                    model="deepseek-reasoner",
                     messages=[
                         {"role": "system", "content": prompt.read().replace("\n", "")},
                         {"role": "user", "content": str(json.load(songs))},
@@ -136,7 +135,7 @@ class FindMusic:
     
     def add_playlist(self):
         print("Adding to playlist...")
-
+        self.load_user_saved()
         # get all tracks in playlist
         try:
             playlist_id = "0aO783eGEA5sKxpQlfxln6"
