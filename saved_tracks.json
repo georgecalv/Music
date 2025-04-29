@@ -1,6 +1,31 @@
 {
     "songs": [
         {
+            "name": "Scratchcard Lanyard",
+            "artist": "Dry Cleaning",
+            "album": "New Long Leg"
+        },
+        {
+            "name": "How Did This Happen!?",
+            "artist": "BODEGA",
+            "album": "Endless Scroll"
+        },
+        {
+            "name": "Valleys",
+            "artist": "Working Men's Club",
+            "album": "Working Men's Club"
+        },
+        {
+            "name": "Sweet",
+            "artist": "Porridge Radio",
+            "album": "Every Bad (Expanded Edition)"
+        },
+        {
+            "name": "Stay With Me",
+            "artist": "Hatchie",
+            "album": "Keepsake"
+        },
+        {
             "name": "Take My Hand",
             "artist": "Matt Berry",
             "album": "Witchazel"
@@ -6474,16 +6499,6 @@
             "name": "Fly by Night (feat. No\u00e9)",
             "artist": "Lucian",
             "album": "Fly by Night (feat. No\u00e9)"
-        },
-        {
-            "name": "Higher Love (feat. Viktor Nor\u00e9n & Gustaf Nor\u00e9n)",
-            "artist": "State of Sound",
-            "album": "Higher Love (feat. Viktor Nor\u00e9n & Gustaf Nor\u00e9n)"
-        },
-        {
-            "name": "Bohemian Rhapsody - Remastered 2011",
-            "artist": "Queen",
-            "album": "A Night At The Opera (2011 Remaster)"
         }
     ]
 }

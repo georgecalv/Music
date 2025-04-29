@@ -4,13 +4,11 @@ import spotipy
 from spotipy.oauth2 import SpotifyOAuth
 import json
 import argparse
-import requests
 from bs4 import BeautifulSoup
 from youtubesearchpython import VideosSearch
 from pprint import pprint
 from pytubefix import YouTube
 from openai import OpenAI
-from pprint import pprint
 
 
 load_dotenv()
@@ -23,6 +21,8 @@ class FindMusic:
         ai_key = os.getenv("OPEN_AI")
         self.sp = spotipy.Spotify(auth_manager=SpotifyOAuth(scope="user-library-read playlist-modify-public playlist-modify-private", open_browser=False))
         self.ai_client = client = OpenAI(api_key=ai_key, base_url="https://api.deepseek.com")
+        self.saved_ids = []
+        self.load_user_saved()
 
     def load_user_saved(self):
         print("Starting to get saved tracks...")
@@ -40,6 +40,7 @@ class FindMusic:
                         "album": track['album']['name'],
                     }
                     result['songs'].append(song)
+                    self.saved_ids.append(item["track"]['uri'])
                 offset += limit
                 i += 1
             with open("saved_tracks.json", "w") as f:
@@ -119,7 +120,7 @@ class FindMusic:
         with open("prompt.txt", 'r') as prompt:
             with open("saved_tracks.json", 'r') as songs:
                 response = self.ai_client.chat.completions.create(
-                    model="deepseek-reasoner",
+                    model="deepseek-chat",
                     messages=[
                         {"role": "system", "content": prompt.read().replace("\n", "")},
                         {"role": "user", "content": str(json.load(songs))},
@@ -135,15 +136,32 @@ class FindMusic:
     
     def add_playlist(self):
         print("Adding to playlist...")
-        with open("music_suggestions.json", "r") as f:
-            data = json.load(f)
-            tracks = []
-            for song in data["songs"]:
-                q = f"artist:{song["artist"]}, track:{song["name"]}"
-                result = self.sp.search(q=q, limit=1)
-                tracks.append(result["tracks"]['items'][0]['uri'])
-                # spotify:playlist:0aO783eGEA5sKxpQlfxln6
-            self.sp.user_playlist_add_tracks(user="georgecal-us", playlist_id="0aO783eGEA5sKxpQlfxln6", tracks=tracks)
+
+        # get all tracks in playlist
+        try:
+            playlist_id = "0aO783eGEA5sKxpQlfxln6"
+            results = self.sp.playlist_items(playlist_id, limit=100)
+            added_tracks = []
+            for item in results["items"]:
+                added_tracks.append(item["track"]['uri'])
+            with open("music_suggestions.json", "r") as f:
+                data = json.load(f)
+                tracks = []
+                for song in data["songs"]:
+                    q = f"artist:{song["artist"]}, track:{song["name"]}"
+                    result = self.sp.search(q=q, limit=1)
+                    try:
+                        if result["tracks"]['items'][0]['uri'] not in added_tracks and result["tracks"]['items'][0]['uri'] not in self.saved_ids:
+                            tracks.append(result["tracks"]['items'][0]['uri'])
+                        else: 
+                            print(f"Did not add {song["name"]} by {song["artist"]}")
+                    except:
+                        print(f"Unable to add {song['name']} by {song['artist']}")
+                
+                    # spotify:playlist:0aO783eGEA5sKxpQlfxln6
+                self.sp.user_playlist_add_tracks(user="georgecal-us", playlist_id=playlist_id, tracks=tracks)
+        except Exception as e:
+            print(f"Exception: {e}")
 
 
 
@@ -167,6 +185,7 @@ if __name__ == "__main__":
         find_music.load_lyrics()
     elif args.suggestions:
         find_music.get_suggestions()
+        find_music.add_playlist()
     elif args.add:
         find_music.add_playlist()
     else:
