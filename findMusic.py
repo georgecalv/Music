@@ -10,6 +10,7 @@ from youtubesearchpython import VideosSearch
 from pprint import pprint
 from pytubefix import YouTube
 from openai import OpenAI
+from pprint import pprint
 
 
 load_dotenv()
@@ -20,7 +21,7 @@ class FindMusic:
         os.environ["SPOTIPY_CLIENT_SECRET"] = os.getenv("SPOTIPY_CLIENT_SECRET")
         os.environ["SPOTIPY_REDIRECT_URI"] = os.getenv("SPOTIPY_REDIRECT_URI")
         ai_key = os.getenv("OPEN_AI")
-        self.sp = spotipy.Spotify(auth_manager=SpotifyOAuth(scope="user-library-read", open_browser=False))
+        self.sp = spotipy.Spotify(auth_manager=SpotifyOAuth(scope="user-library-read playlist-modify-public playlist-modify-private", open_browser=False))
         self.ai_client = client = OpenAI(api_key=ai_key, base_url="https://api.deepseek.com")
 
     def load_user_saved(self):
@@ -114,6 +115,7 @@ class FindMusic:
                     print("Error: ", e)
 
     def get_suggestions(self):
+        print("Getting Suggestions...")
         with open("prompt.txt", 'r') as prompt:
             with open("saved_tracks.json", 'r') as songs:
                 response = self.ai_client.chat.completions.create(
@@ -125,10 +127,26 @@ class FindMusic:
                     temperature=1.5,
                     stream=False
                 )
-            print(response.choices[0].message.content)
-            print(type(response.choices[0].message.content))
-            with open("music_suggestions.txt", "a") as f:
-                f.write(response.choices[0].message.content)
+            unclean_suggest = response.choices[0].message.content
+            clean_str = unclean_suggest.strip('`').strip('json').strip()
+            json_data = json.loads(clean_str)
+            with open("music_suggestions.json", "w") as f:
+                f.write(json.dumps(json_data, indent=4))
+    
+    def add_playlist(self):
+        print("Adding to playlist...")
+        with open("music_suggestions.json", "r") as f:
+            data = json.load(f)
+            tracks = []
+            for song in data["songs"]:
+                q = f"artist:{song["artist"]}, track:{song["name"]}"
+                result = self.sp.search(q=q, limit=1)
+                tracks.append(result["tracks"]['items'][0]['uri'])
+                # spotify:playlist:0aO783eGEA5sKxpQlfxln6
+            self.sp.user_playlist_add_tracks(user="georgecal-us", playlist_id="0aO783eGEA5sKxpQlfxln6", tracks=tracks)
+
+
+
 
 
 if __name__ == "__main__":
@@ -137,6 +155,7 @@ if __name__ == "__main__":
     parser.add_argument("--download", action="store_true", help="Download music from saved tracks with links")
     parser.add_argument("--lyrics", action="store_true", help="Load lyrics from saved tracks with links")
     parser.add_argument("--suggestions", action="store_true", help="Get Ai suggesstions for new music")
+    parser.add_argument("--add", action="store_true", help="Add AI suggestions to playlist")
     args = parser.parse_args()
 
     find_music = FindMusic()
@@ -148,5 +167,7 @@ if __name__ == "__main__":
         find_music.load_lyrics()
     elif args.suggestions:
         find_music.get_suggestions()
+    elif args.add:
+        find_music.add_playlist()
     else:
        find_music.load_user_saved()
