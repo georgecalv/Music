@@ -4,12 +4,15 @@ import spotipy
 from spotipy.oauth2 import SpotifyOAuth
 import json
 import argparse
+import requests
+import music_tag
 from bs4 import BeautifulSoup
 from youtubesearchpython import VideosSearch
 from pprint import pprint
 from pytubefix import YouTube
 from openai import OpenAI
 from tqdm import tqdm
+from datetime import datetime
 
 
 load_dotenv()
@@ -20,7 +23,7 @@ class FindMusic:
         os.environ["SPOTIPY_CLIENT_SECRET"] = os.getenv("SPOTIPY_CLIENT_SECRET")
         os.environ["SPOTIPY_REDIRECT_URI"] = os.getenv("SPOTIPY_REDIRECT_URI")
         ai_key = os.getenv("OPEN_AI")
-        self.sp = spotipy.Spotify(auth_manager=SpotifyOAuth(scope="user-library-read playlist-modify-public playlist-modify-private", open_browser=False))
+        self.sp = spotipy.Spotify(auth_manager=SpotifyOAuth(scope="user-library-read playlist-modify-public playlist-modify-private user-read-currently-playing user-read-recently-played", open_browser=False))
         self.ai_client = client = OpenAI(api_key=ai_key, base_url="https://api.deepseek.com")
         self.saved_ids = []
 
@@ -64,10 +67,13 @@ class FindMusic:
                     search_query = f"{name} {artist}"
                     search = VideosSearch(search_query, limit=1)
                     link = search.result()['result'][0]['link']
+                    yt = YouTube(link)
+                    thumbnail_url = yt.thumbnail_url
                     song = {
                         "name": name,
                         "artist": artist,
-                        "link": link
+                        "link": link,
+                        "thumbnail_url": thumbnail_url
                     }
                     result['songs'].append(song)
             print("Finished finding links")
@@ -78,7 +84,7 @@ class FindMusic:
                 f.write(json.dumps(result, indent=4))
     
     def download_music(self):
-        print("Start Downlaoding...")
+        print("Start Downloading...")
         with open("saved_tracks_with_links.json", "r") as f:
             data = json.load(f)
             num_songs = len(data['songs'])
@@ -93,6 +99,23 @@ class FindMusic:
                             audio.download(output_path="./mp3s", filename=f'{song['name']}-{song['artist']}.mp3')
                     except Exception as e:
                         print("Error: ", e)
+    def set_meta(self):
+        print("Starting Meta Data Generation...")
+        with open("saved_tracks_with_links.json", "r") as f:
+            data = json.load(f)
+            num = len(data['songs'])
+            for index in tqdm(range(num), desc="Writing Meta Data"):
+                song = data['songs'][index]
+                mt_file = music_tag.load_file(f"./mp3s/{song['name']}-{song['artist']}")
+                mt_file['artist'] = song['artist']
+                mt_file['album'] = song['album']
+                img_data = requests.get(song["thumbnail_url"]).content
+                mt_file['artwork'] = img_data
+                mt_file.save()
+                
+
+                
+
     def load_lyrics(self):
         with open("saved_tracks_with_links.json", "r") as f:
             data = json.load(f)
@@ -109,7 +132,7 @@ class FindMusic:
                 except:
                     print(f"Unable to get captions for {song['name']} by {song['artist']}")
                     continue
-                
+
 
     def get_suggestions(self):
         print("Getting Suggestions...")
@@ -158,6 +181,24 @@ class FindMusic:
                 self.sp.user_playlist_add_tracks(user="georgecal-us", playlist_id=playlist_id, tracks=tracks)
         except Exception as e:
             print(f"Exception: {e}")
+    
+    def get_recent(self):
+        try:
+            recent = self.sp.current_user_recently_played(limit=50)
+            result = {'songs': []}
+            with open("recently_played.json", 'w') as f:
+                for song in recent['items']:
+                    result['song'].append(
+                        {
+                            'played_at': song['played_at'],
+                            'artist': song['track']['album']['artists'][0]['name'],
+                            'track': song['track']['album']['name']
+                        }
+                    )
+                f.write(json.dumps(result, indent=4))
+                
+        except Exception as e:
+            print(f"Unable to get recents: {e}")
 
 
 
@@ -170,6 +211,8 @@ if __name__ == "__main__":
     parser.add_argument("--lyrics", action="store_true", help="Load lyrics from saved tracks with links")
     parser.add_argument("--suggestions", action="store_true", help="Get Ai suggesstions for new music")
     parser.add_argument("--add", action="store_true", help="Add AI suggestions to playlist")
+    parser.add_argument("--recent", action="store_true", help="Get recently played")
+    parser.add_argument("--meta", action="store_true", help="Load Metadata")
     args = parser.parse_args()
 
     find_music = FindMusic()
@@ -184,5 +227,9 @@ if __name__ == "__main__":
         find_music.add_playlist()
     elif args.add:
         find_music.add_playlist()
+    elif args.recent:
+        find_music.get_recent()
+    elif args.meta:
+        find_music.set_meta()
     else:
        find_music.load_user_saved()

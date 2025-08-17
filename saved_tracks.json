@@ -1,6 +1,361 @@
 {
     "songs": [
         {
+            "name": "IDEA OF US",
+            "artist": "Jackson Homer",
+            "album": "IDEA OF US (Special Edition)"
+        },
+        {
+            "name": "RALLY FM (RALLY STATION 2)",
+            "artist": "Noxygen",
+            "album": "RALLY FM (RALLY STATION 2)"
+        },
+        {
+            "name": "Pantone Karaoke",
+            "artist": "Petite League",
+            "album": "Thrill Seekers"
+        },
+        {
+            "name": "Rico Coco",
+            "artist": "NFC",
+            "album": "Mandrill Cuts 003"
+        },
+        {
+            "name": "Tenha F\u00e9, Pois Amanh\u00e3 um Lindo Dia Vai Nascer",
+            "artist": "Salinas",
+            "album": "Wanted Bossa Nova: From Diggers to Music Lovers"
+        },
+        {
+            "name": "Touch Me I'm Going To Scream, Pt. 2",
+            "artist": "My Morning Jacket",
+            "album": "Evil Urges"
+        },
+        {
+            "name": "Golden",
+            "artist": "My Morning Jacket",
+            "album": "It Still Moves"
+        },
+        {
+            "name": "Run It",
+            "artist": "My Morning Jacket",
+            "album": "The Waterfall II"
+        },
+        {
+            "name": "End Of Summer",
+            "artist": "Tame Impala",
+            "album": "End Of Summer"
+        },
+        {
+            "name": "Talk About It",
+            "artist": "Post Sex Nachos",
+            "album": "Prima/Vera"
+        },
+        {
+            "name": "Flagpole Sitta",
+            "artist": "Harvey Danger",
+            "album": "Where Have All The Merrymakers Gone?"
+        },
+        {
+            "name": "Born Slippy (Nuxx)",
+            "artist": "Underworld",
+            "album": "1992 - 2012"
+        },
+        {
+            "name": "Save It for Later - 2012 Remaster",
+            "artist": "The English Beat",
+            "album": "Special Beat Service (Expanded) [2012 Remaster]"
+        },
+        {
+            "name": "Losing You",
+            "artist": "Solange",
+            "album": "Losing You"
+        },
+        {
+            "name": "A Message to You Rudy - 2015 Remaster",
+            "artist": "The Specials",
+            "album": "The Specials (Deluxe Version)"
+        },
+        {
+            "name": "Love Will Tear Us Apart - 2020 Remaster",
+            "artist": "Joy Division",
+            "album": "Love Will Tear Us Apart"
+        },
+        {
+            "name": "..THUS IS WHY ( I DON\u2019T SPRING 4 LOVE )",
+            "artist": "Saya Gray",
+            "album": "SAYA"
+        },
+        {
+            "name": "Half Mast",
+            "artist": "Empire Of The Sun",
+            "album": "Walking On A Dream (10th Anniversary Edition)"
+        },
+        {
+            "name": "Goodman",
+            "artist": "Meldrop",
+            "album": "Meldrop"
+        },
+        {
+            "name": "Before You I Just Forget",
+            "artist": "Fontaines D.C.",
+            "album": "Romance (Deluxe Edition)"
+        },
+        {
+            "name": "Yucky's Song",
+            "artist": "Mustard Service",
+            "album": "Vice City Magic"
+        },
+        {
+            "name": "2 AM",
+            "artist": "Mustard Service",
+            "album": "Vice City Magic"
+        },
+        {
+            "name": "Friday I'm in Love",
+            "artist": "The Cure",
+            "album": "Wish"
+        },
+        {
+            "name": "Lover Girl",
+            "artist": "Laufey",
+            "album": "Lover Girl"
+        },
+        {
+            "name": "How Long Do I Have to Wait for You?",
+            "artist": "Sharon Jones & The Dap-Kings",
+            "album": "Naturally"
+        },
+        {
+            "name": "Baddy On The Floor",
+            "artist": "Jamie xx",
+            "album": "In Waves"
+        },
+        {
+            "name": "Petals",
+            "artist": "TOPS",
+            "album": "Sugar at the Gate"
+        },
+        {
+            "name": "Free",
+            "artist": "Little Simz",
+            "album": "Lotus"
+        },
+        {
+            "name": "Give Your Love To Me",
+            "artist": "Asher Kartman",
+            "album": "Give Your Love To Me"
+        },
+        {
+            "name": "Be Sweet",
+            "artist": "Japanese Breakfast",
+            "album": "Jubilee"
+        },
+        {
+            "name": "WASSUP (feat. JPEGMAFIA)",
+            "artist": "Joey Valence & Brae",
+            "album": "WASSUP (feat. JPEGMAFIA)"
+        },
+        {
+            "name": "Taking up Space",
+            "artist": "Mustard Service",
+            "album": "Zest Pop"
+        },
+        {
+            "name": "Forever",
+            "artist": "George Riley",
+            "album": "Forever"
+        },
+        {
+            "name": "My Baby (Got Nothing At All) (Materialists Original Soundtrack)",
+            "artist": "Japanese Breakfast",
+            "album": "My Baby (Got Nothing At All) (Materialists Original Soundtrack)"
+        },
+        {
+            "name": "Enough",
+            "artist": "Little Simz",
+            "album": "Lotus"
+        },
+        {
+            "name": "Lion",
+            "artist": "Little Simz",
+            "album": "Lotus"
+        },
+        {
+            "name": "Only",
+            "artist": "Little Simz",
+            "album": "Lotus"
+        },
+        {
+            "name": "Silent Acknowledgement",
+            "artist": "Darryl Rahn",
+            "album": "Silent Acknowledgement / There Ain't You"
+        },
+        {
+            "name": "Going Nowhere",
+            "artist": "Mustard Service",
+            "album": "Going Nowhere"
+        },
+        {
+            "name": "Big Time",
+            "artist": "Mustard Service",
+            "album": "Big Time"
+        },
+        {
+            "name": "Conversation Overtime",
+            "artist": "Mustard Service",
+            "album": "Conversation Overtime"
+        },
+        {
+            "name": "Pulling Our Weight",
+            "artist": "The Radio Dept.",
+            "album": "I Don't Need Love, I've Got My Band"
+        },
+        {
+            "name": "That's Entertainment",
+            "artist": "The Jam",
+            "album": "Sound Affects"
+        },
+        {
+            "name": "Some Time Alone, Alone",
+            "artist": "Melody's Echo Chamber",
+            "album": "Melody's Echo Chamber"
+        },
+        {
+            "name": "In Between Days - 2006 Remaster",
+            "artist": "The Cure",
+            "album": "The Head on the Door (Deluxed Edition)"
+        },
+        {
+            "name": "Archie, Marry Me",
+            "artist": "Alvvays",
+            "album": "Alvvays"
+        },
+        {
+            "name": "Dreams Never End - 2015 Remaster",
+            "artist": "New Order",
+            "album": "Movement"
+        },
+        {
+            "name": "Why Would I Lie?",
+            "artist": "FEET",
+            "album": "Make It Up"
+        },
+        {
+            "name": "Chalet 47",
+            "artist": "FEET",
+            "album": "What's Inside is More Than Just Ham"
+        },
+        {
+            "name": "Waiting In Vain",
+            "artist": "Bob Marley & The Wailers",
+            "album": "Exodus"
+        },
+        {
+            "name": "malibU",
+            "artist": "rusowsky",
+            "album": "DAISY"
+        },
+        {
+            "name": "Lotus 72 D",
+            "artist": "Z\u00e9 Roberto",
+            "album": "Lotus 72 D"
+        },
+        {
+            "name": "Bad Baby (Club Mix)",
+            "artist": "Neggy Gemmy",
+            "album": "Bad Baby"
+        },
+        {
+            "name": "Monday, Monday",
+            "artist": "TV Girl",
+            "album": "Fauxllennium (Japanese Deluxe Edition)"
+        },
+        {
+            "name": "Daria",
+            "artist": "Toro y Moi",
+            "album": "Daria"
+        },
+        {
+            "name": "Valentine's Day Freestyle '25",
+            "artist": "JPEGMAFIA",
+            "album": "Valentine's Day Freestyle '25"
+        },
+        {
+            "name": "Big Boy 4014",
+            "artist": "Vulfmon",
+            "album": "Big Boy 4014"
+        },
+        {
+            "name": "We Don't Have to Be Alone",
+            "artist": "Thee Sacred Souls",
+            "album": "We Don't Have to Be Alone"
+        },
+        {
+            "name": "Young",
+            "artist": "Little Simz",
+            "album": "Young"
+        },
+        {
+            "name": "Crying, Laughing, Loving, Lying",
+            "artist": "Peach Pit",
+            "album": "Magpie (Expansion Pack)"
+        },
+        {
+            "name": "Images (feat. 454 & Toro y Moi)",
+            "artist": "Amin\u00e9",
+            "album": "13 Months of Sunshine"
+        },
+        {
+            "name": "Raspberry Kisses",
+            "artist": "Amin\u00e9",
+            "album": "13 Months of Sunshine"
+        },
+        {
+            "name": "Cool About It (feat. Lido)",
+            "artist": "Amin\u00e9",
+            "album": "13 Months of Sunshine"
+        },
+        {
+            "name": "I Think It's You",
+            "artist": "Amin\u00e9",
+            "album": "13 Months of Sunshine"
+        },
+        {
+            "name": "Sage Time",
+            "artist": "Amin\u00e9",
+            "album": "13 Months of Sunshine"
+        },
+        {
+            "name": "Feels So Good",
+            "artist": "Amin\u00e9",
+            "album": "13 Months of Sunshine"
+        },
+        {
+            "name": "New Flower! (feat. Leon Thomas)",
+            "artist": "Amin\u00e9",
+            "album": "13 Months of Sunshine"
+        },
+        {
+            "name": "OH! TENGO SUERTE",
+            "artist": "Masayoshi Takanaka",
+            "album": "SEYCHELLES"
+        },
+        {
+            "name": "Vacay",
+            "artist": "Amin\u00e9",
+            "album": "Vacay"
+        },
+        {
+            "name": "Bottle Episode",
+            "artist": "Mandy, Indiana",
+            "album": "Bottle Episode"
+        },
+        {
+            "name": "The Overload",
+            "artist": "Yard Act",
+            "album": "The Overload"
+        },
+        {
             "name": "Snow Day",
             "artist": "shame",
             "album": "Drunk Tank Pink (Deluxe Edition)"
@@ -1651,7 +2006,7 @@
             "album": "When We Were Friends"
         },
         {
-            "name": "Goodbye Stranger - 2010 Remastered",
+            "name": "Goodbye Stranger - Remastered 2010",
             "artist": "Supertramp",
             "album": "Breakfast In America (Deluxe Edition)"
         },
@@ -1808,7 +2163,7 @@
         {
             "name": "Lavender Lust",
             "artist": "Ramirez",
-            "album": "THE PLAYA$ MANUAL"
+            "album": "THA PLAYA$ MANUAL"
         },
         {
             "name": "Useless",
@@ -6144,361 +6499,6 @@
             "name": "St. Tropez",
             "artist": "J. Cole",
             "album": "2014 Forest Hills Drive"
-        },
-        {
-            "name": "G.O.M.D.",
-            "artist": "J. Cole",
-            "album": "2014 Forest Hills Drive"
-        },
-        {
-            "name": "Hello",
-            "artist": "J. Cole",
-            "album": "2014 Forest Hills Drive"
-        },
-        {
-            "name": "Apparently",
-            "artist": "J. Cole",
-            "album": "2014 Forest Hills Drive"
-        },
-        {
-            "name": "Love Yourz",
-            "artist": "J. Cole",
-            "album": "2014 Forest Hills Drive"
-        },
-        {
-            "name": "Note to Self",
-            "artist": "J. Cole",
-            "album": "2014 Forest Hills Drive"
-        },
-        {
-            "name": "03' Adolescence",
-            "artist": "J. Cole",
-            "album": "2014 Forest Hills Drive"
-        },
-        {
-            "name": "Another One Bites The Dust - Remastered 2011",
-            "artist": "Queen",
-            "album": "The Game (Deluxe Remastered Version)"
-        },
-        {
-            "name": "m.A.A.d city",
-            "artist": "Kendrick Lamar",
-            "album": "good kid, m.A.A.d city"
-        },
-        {
-            "name": "Chill Bill (feat. J. Davi$ & Spooks)",
-            "artist": "Rob $tone",
-            "album": "Chill Bill (feat. J. Davi$ & Spooks)"
-        },
-        {
-            "name": "I Swear (feat. Young Thug)",
-            "artist": "Wyclef Jean",
-            "album": "I Swear (feat. Young Thug)"
-        },
-        {
-            "name": "Rush",
-            "artist": "Starrah",
-            "album": "\u00af\\_(\u30c4)_ / \u00af"
-        },
-        {
-            "name": "V. 3005 - Beach Picnic Version",
-            "artist": "Childish Gambino",
-            "album": "Kauai"
-        },
-        {
-            "name": "IV. Sweatpants",
-            "artist": "Childish Gambino",
-            "album": "Because The Internet"
-        },
-        {
-            "name": "V. 3005",
-            "artist": "Childish Gambino",
-            "album": "because the internet"
-        },
-        {
-            "name": "King Kunta",
-            "artist": "Kendrick Lamar",
-            "album": "To Pimp A Butterfly"
-        },
-        {
-            "name": "One Night",
-            "artist": "Lil Yachty",
-            "album": "Lil Boat"
-        },
-        {
-            "name": "6 Foot 7 Foot",
-            "artist": "Lil Wayne",
-            "album": "Tha Carter IV (Deluxe)"
-        },
-        {
-            "name": "679 (feat. Remy Boyz)",
-            "artist": "Fetty Wap",
-            "album": "679 (feat. Remy Boyz)"
-        },
-        {
-            "name": "Broccoli",
-            "artist": "DRAM",
-            "album": "Broccoli"
-        },
-        {
-            "name": "Trouble - Remastered",
-            "artist": "Elvis Presley",
-            "album": "The Essential Elvis Presley"
-        },
-        {
-            "name": "Downtown (feat. Melle Mel, Grandmaster Caz, Kool Moe Dee & Eric Nally)",
-            "artist": "Macklemore & Ryan Lewis",
-            "album": "Downtown (feat. Melle Mel, Grandmaster Caz, Kool Moe Dee & Eric Nally)"
-        },
-        {
-            "name": "Erase Your Social",
-            "artist": "Lil Uzi Vert",
-            "album": "The Perfect LUV Tape"
-        },
-        {
-            "name": "Outta Sight / Dark Lavender - Interlude",
-            "artist": "DRAM",
-            "album": "Big Baby DRAM"
-        },
-        {
-            "name": "Password",
-            "artist": "DRAM",
-            "album": "Big Baby DRAM"
-        },
-        {
-            "name": "Caroline",
-            "artist": "Amin\u00e9",
-            "album": "Caroline"
-        },
-        {
-            "name": "Propaganda",
-            "artist": "DJ Snake",
-            "album": "Propaganda"
-        },
-        {
-            "name": "Fade",
-            "artist": "Kanye West",
-            "album": "The Life Of Pablo"
-        },
-        {
-            "name": "Fade Away",
-            "artist": "Logic",
-            "album": "The Incredible True Story"
-        },
-        {
-            "name": "Sahara",
-            "artist": "DJ Snake",
-            "album": "Encore"
-        },
-        {
-            "name": "This Girl (Kungs Vs Cookin' On 3 Burners) - Extended",
-            "artist": "Kungs",
-            "album": "This Girl - EP"
-        },
-        {
-            "name": "Tous Les M\u00eames - Remix",
-            "artist": "Stromae",
-            "album": "Remixes"
-        },
-        {
-            "name": "Ta f\u00eate",
-            "artist": "Stromae",
-            "album": "Racine Carr\u00e9e (Standard US Version)"
-        },
-        {
-            "name": "Papaoutai",
-            "artist": "Stromae",
-            "album": "Racine Carr\u00e9e (Standard US Version)"
-        },
-        {
-            "name": "b\u00e2tard",
-            "artist": "Stromae",
-            "album": "Racine Carr\u00e9e (Standard US Version)"
-        },
-        {
-            "name": "ave cesaria",
-            "artist": "Stromae",
-            "album": "Racine Carr\u00e9e (Standard US Version)"
-        },
-        {
-            "name": "Tous les m\u00eames",
-            "artist": "Stromae",
-            "album": "Racine Carr\u00e9e (Standard US Version)"
-        },
-        {
-            "name": "Formidable",
-            "artist": "Stromae",
-            "album": "Racine Carr\u00e9e (Standard US Version)"
-        },
-        {
-            "name": "moules frites",
-            "artist": "Stromae",
-            "album": "Racine Carr\u00e9e (Standard US Version)"
-        },
-        {
-            "name": "carmen",
-            "artist": "Stromae",
-            "album": "Racine Carr\u00e9e (Standard US Version)"
-        },
-        {
-            "name": "humain \u00e0 l'eau",
-            "artist": "Stromae",
-            "album": "Racine Carr\u00e9e (Standard US Version)"
-        },
-        {
-            "name": "quand c'est ?",
-            "artist": "Stromae",
-            "album": "Racine Carr\u00e9e (Standard US Version)"
-        },
-        {
-            "name": "sommeil",
-            "artist": "Stromae",
-            "album": "Racine Carr\u00e9e (Standard US Version)"
-        },
-        {
-            "name": "merci",
-            "artist": "Stromae",
-            "album": "Racine Carr\u00e9e (Standard US Version)"
-        },
-        {
-            "name": "avf",
-            "artist": "Stromae",
-            "album": "Racine Carr\u00e9e (Standard US Version)"
-        },
-        {
-            "name": "papaoutai - Bonus track",
-            "artist": "Stromae",
-            "album": "Racine Carr\u00e9e (Standard US Version)"
-        },
-        {
-            "name": "Is This Love - Remix",
-            "artist": "Bob Marley & The Wailers",
-            "album": "Is This Love (Remix)"
-        },
-        {
-            "name": "Africa",
-            "artist": "TOTO",
-            "album": "Toto IV"
-        },
-        {
-            "name": "Light It Up (feat. Nyla & Fuse ODG) [Remix]",
-            "artist": "Major Lazer",
-            "album": "Peace Is The Mission (Extended)"
-        },
-        {
-            "name": "Perfect Strangers",
-            "artist": "Jonas Blue",
-            "album": "Perfect Strangers"
-        },
-        {
-            "name": "Here for You (feat. Ella Henderson)",
-            "artist": "Kygo",
-            "album": "Here for You (feat. Ella Henderson)"
-        },
-        {
-            "name": "Red Light - Few Wolves x Bastiaan Remix",
-            "artist": "Freja Kirk",
-            "album": "Red Light (Few Wolves x Bastiaan Remix)"
-        },
-        {
-            "name": "Powerful (feat. Ellie Goulding & Tarrus Riley)",
-            "artist": "Major Lazer",
-            "album": "Peace Is The Mission"
-        },
-        {
-            "name": "I Took A Pill In Ibiza - Seeb Remix",
-            "artist": "Mike Posner",
-            "album": "I Took A Pill In Ibiza (Seeb Remix)"
-        },
-        {
-            "name": "Aloha",
-            "artist": "M\u00f8me",
-            "album": "Aloha"
-        },
-        {
-            "name": "Stay (feat. Maty Noyes)",
-            "artist": "Kygo",
-            "album": "Stay (feat. Maty Noyes)"
-        },
-        {
-            "name": "Gold",
-            "artist": "Kiiara",
-            "album": "Gold"
-        },
-        {
-            "name": "We Will Rock You (Fast) - Live",
-            "artist": "Queen",
-            "album": "Queen Rock Montreal"
-        },
-        {
-            "name": "Let Me Entertain You - Live",
-            "artist": "Queen",
-            "album": "Queen Rock Montreal"
-        },
-        {
-            "name": "Somebody To Love - Live",
-            "artist": "Queen",
-            "album": "Queen Rock Montreal"
-        },
-        {
-            "name": "Killer Queen - Live",
-            "artist": "Queen",
-            "album": "Queen Rock Montreal"
-        },
-        {
-            "name": "Now I'm Here - Live",
-            "artist": "Queen",
-            "album": "Queen Rock Montreal"
-        },
-        {
-            "name": "Under Pressure - Live",
-            "artist": "Queen",
-            "album": "Queen Rock Montreal"
-        },
-        {
-            "name": "Drum And Tympani Solo - Live",
-            "artist": "Queen",
-            "album": "Queen Rock Montreal"
-        },
-        {
-            "name": "Flash - Live",
-            "artist": "Queen",
-            "album": "Queen Rock Montreal"
-        },
-        {
-            "name": "The Hero - Live",
-            "artist": "Queen",
-            "album": "Queen Rock Montreal"
-        },
-        {
-            "name": "Bohemian Rhapsody - Live",
-            "artist": "Queen",
-            "album": "Queen Rock Montreal"
-        },
-        {
-            "name": "Tie Your Mother Down - Live",
-            "artist": "Queen",
-            "album": "Queen Rock Montreal"
-        },
-        {
-            "name": "We Are The Champions - Live",
-            "artist": "Queen",
-            "album": "Queen Rock Montreal"
-        },
-        {
-            "name": "God Save The Queen - Live",
-            "artist": "Queen",
-            "album": "Queen Rock Montreal"
-        },
-        {
-            "name": "Bohemian Rhapsody - Remastered 2011",
-            "artist": "Queen",
-            "album": "A Night At The Opera (Deluxe Remastered Version)"
-        },
-        {
-            "name": "Starman - 2012 Remaster",
-            "artist": "David Bowie",
-            "album": "The Rise and Fall of Ziggy Stardust and the Spiders from Mars (2012 Remaster)"
         }
     ]
 }
